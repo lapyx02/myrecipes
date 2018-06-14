@@ -1,1 +1,13 @@
 @import 'bootstrap';
+main .jumbotron {
+  background-image: asset-url('jumbotron_bg.jpg');
+  background-size:cover;
+  background-position: center 22%;
+  h1 {
+    color: #fff;
+    margin-top: 170px;
+  }
+  p.lead {
+    color: #fff !important;
+  }
+}
