@@ -5,5 +5,12 @@ class CreateChefs < ActiveRecord::Migration[5.1]
       t.string :email
       t.timestamps
     end
+  
+    #create_table :recipes do |t|
+    #  t.belongs_to :chef, index: true
+    #  t.string :name
+    #  t.text :email
+    #  t.timestamps
+    #end  
   end
 end

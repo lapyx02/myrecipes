@@ -1,24 +1,24 @@
 # README
+## Д/З
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Создать Тесты для шефов со следующими тестами
+* должен быть валидным
+* Имя должно существовать
+* Имя должно быть не более 50ти символов
+* email должен существовать
+* email  не должен быть сильно длинным 
+* email должен быть правильного формата
+* *Должно откланять email  из чёрного списка
+* *chefname Должно быть уникальным без учёта регистра
+связи перечитать (всю статью)
+Сделать так, чтобы новый интеграционный тест на index:recipes прошёл
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+Д/З
+Будстрап(просмотреть)
 
-* Configuration
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Прописать для шефа соответствующие валидации
+/\A[\w+\-.]+@[\w\d\-]+(\.[\w\d\-]+)*\.[\w]+\z/i

@@ -1,7 +1,8 @@
 require 'test_helper'
 class RecipeTest < ActiveSupport::TestCase
   def setup
-    @recipe = Recipe.new(name: 'Vegatable', description: 'Vegatable recipe')
+    @chef = Chef.create!(chefname: "mashrur", email: "mashrur@example.com")
+    @recipe = @chef.recipes.build(name: 'Vegatable', description: 'Vegatable recipe')
   end 
   
   test 'рецепт должен быть валидным' do
@@ -25,6 +26,11 @@ class RecipeTest < ActiveSupport::TestCase
   
   test 'Описание должно быть мение 500 символов' do
     @recipe.description = 'a' * 501
+    assert_not @recipe.valid?
+  end
+  
+  test 'Рецепт без шефа не может существовать' do
+    @recipe.chef = nil
     assert_not @recipe.valid?
   end
 end  
