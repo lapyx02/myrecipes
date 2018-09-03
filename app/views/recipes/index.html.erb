@@ -1,19 +1,23 @@
 <h1 align="center">Список всех рецептов</h1>
+<hr />
+
 <% @recipes.each do |recipe| %>
-  <div class="row">
+  <div class="row mb-2 recipe-list ">
     <div class="col-md-2">
       <section class="center">
         
       </section>
     </div>
-    <div class="col-md-8 well">
-      <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
-      <p><%= truncate(recipe.description, length: 150) %></p>
-      <p>
-        <span class="quiet"><small>Создан 
-
-        <%= time_ago_in_words(recipe.created_at) %> ago</small></span>
-      </p> 
+    <div class="col-md-8 card bg-light rounded-0">
+      <div class='card-block'>
+        <h4><%= link_to recipe.name, recipe_path(recipe), class: 'text-success' %></h4>
+        <p><%= truncate(recipe.description, length: 150) %></p>
+        <p>
+          <span class="quiet font-italic"><small>Создан 
+  
+          <%= time_ago_in_words(recipe.created_at) %> ago</small></span>
+        </p> 
+      </div>
     </div>
   </div>
 <% end %>

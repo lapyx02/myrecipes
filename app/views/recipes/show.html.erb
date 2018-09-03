@@ -1,19 +1,24 @@
 <h1 align="center">Название рецепта: <%= @recipe.name.capitalize %></h1>
-
-<div class="well col-md-8 col-md-offset-2">
-  <h4 class="center description"><strong>Описание: </strong></h4>
-  <hr />
-  <%= @recipe.description %>
-  <hr />
-  <div class="pull-right">
-    <p class="center">
-      Создан:
-    </p>
-    <p>
-      <small><%= @recipe.chef.chefname %></small>
-      <div class="pull-right">
-        <%= time_ago_in_words(@recipe.created_at) %> ago
+<hr />
+<div class='row'>
+  <div class=' col-md-8 offset-md-2'>
+    <div class="card bg-light">
+      <div class='card-header'>Описание</div>
+      <div class='card-body'>
+        <hr />
+        <%= @recipe.description %>
+        <div class="pull-right">
+          <p class="center">
+            Создан:
+          </p>
+          <p>
+            <small><%= @recipe.chef.chefname %></small>
+            <div class="pull-right">
+              <%= time_ago_in_words(@recipe.created_at) %> ago
+            </div>
+          </p>
+        </div>
       </div>
-    </p>
+    </div>
   </div>
 </div>
